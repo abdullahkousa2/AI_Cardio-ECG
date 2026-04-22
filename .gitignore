@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+Untitled*.ipynb
+
+# Large archives (do not commit)
+*.zip
+*.rar
+*.tar.gz
+*.7z
+
+# Old / duplicate model files (primary model tracked via Git LFS)
+*.keras
+best_mobilenet.keras
+heart diagnose/
+
+# Raw dataset archives
+archive (2)/
+
+# Environment
+.env
+.env.local
+venv/
+env/
+.venv/
+
+# Claude Code internals
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,40 @@
+# Source control
+.git/
+.gitignore
+.gitattributes
+
+# Claude Code internals
+.claude/
+
+# Python artifacts
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Jupyter notebooks (not needed in container)
+*.ipynb
+.ipynb_checkpoints/
+
+# Large archives
+*.zip
+*.rar
+*.tar.gz
+archive (2)/
+
+# Duplicate / old model files
+*.keras
+
+# Dev-only folders
+notebooks/
+samples/
+assets/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docs / meta
+README.md
+Dockerfile*
+docker-compose*.yml
+.dockerignore

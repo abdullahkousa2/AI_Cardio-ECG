@@ -1,0 +1,30 @@
+# ── GPU image (requires NVIDIA Container Toolkit) ──
+FROM pytorch/pytorch:2.3.0-cuda12.1-cudnn8-runtime
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# torch + torchvision are already in the base image — install only remaining deps
+RUN pip install --no-cache-dir \
+    "timm>=0.9.12" \
+    "fastapi>=0.110.0" \
+    "uvicorn[standard]>=0.29.0" \
+    "python-multipart>=0.0.9" \
+    "pillow>=10.0.0" \
+    "numpy>=1.24.0" \
+    "opencv-python-headless>=4.9.0"
+
+COPY app/ ./app/
+COPY static/ ./static/
+COPY models/ ./models/
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
