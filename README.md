@@ -5,6 +5,16 @@ An AI-powered web application that classifies ECG images into 4 cardiac conditio
 ![Accuracy](https://img.shields.io/badge/Accuracy-98.61%25-brightgreen)
 ![Model](https://img.shields.io/badge/Model-EfficientNetV2--S-blue)
 ![Framework](https://img.shields.io/badge/Framework-FastAPI%20%2B%20PyTorch-orange)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-FFD21E?style=flat&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/Abdullah2026/AI-Cardio-ECG)
+
+---
+
+## Demo
+
+> Upload an ECG image → get the predicted condition + confidence bars + Grad-CAM heatmap showing which regions drove the decision.
+
+<!-- Add a screenshot or GIF here: drag your demo image into the GitHub editor and it will upload automatically -->
+<!-- Example: ![CardioAI Demo](assets/demo.gif) -->
 
 ---
 
@@ -46,7 +56,7 @@ An AI-powered web application that classifies ECG images into 4 cardiac conditio
 
 ```bash
 conda activate ocr
-cd "c:\Users\abdul\heart diagnose"
+cd "heart diagnose"
 pip install -r requirements.txt
 python -m uvicorn app.main:app
 ```
