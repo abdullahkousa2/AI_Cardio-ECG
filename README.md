@@ -13,6 +13,10 @@ An AI-powered web application that classifies ECG images into 4 cardiac conditio
 
 > Upload an ECG image → get the predicted condition + confidence bars + Grad-CAM heatmap showing which regions drove the decision.
 
+
+https://github.com/user-attachments/assets/739c803e-b22a-4638-81ae-342fc4bb2281
+
+
 <!-- Add a screenshot or GIF here: drag your demo image into the GitHub editor and it will upload automatically -->
 <!-- Example: ![CardioAI Demo](assets/demo.gif) -->
 
